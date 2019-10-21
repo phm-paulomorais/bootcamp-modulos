@@ -1,0 +1,88 @@
+
+iniciar projeto:
+
+> yarn init -y
+cria o arquivo package.json 
+-> Nesse arquivo tem as bibliotecas de terceiros instaladas
+
+para iniciar no vs code:
+
+> code .
+
+Instalar a biblioteca express:
+
+> yarn add express
+
+Quandor outra pessoa for executar o projeto, basta executar o seguinte comando para instalar as dependências:
+
+> yarn
+
+Para reiniciar automaticamente o código, instalar a seguinte dependência:
+
+> yarn add nodemon -D
+obs.: -D (desenvolvimento)
+
+No arquivo package.json add a configuração:
+
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+
+  Por último executar o script:
+
+  > yarn dev
+
+
+Para permitir usar import no node e build automático no projeto:
+
+> yarn add sucrase nodemon -D
+
+Com a alteração acima, é preciso executar a aplicação com sucrase , exemplo abaixo:
+
+> yarn sucrase-node src/server.js
+
+Criar o script no arquivo package.json: 
+
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "dev:debug": "nodemon --inspect src/server.js"
+  },
+
+E o arquivo nodemon.json na raiz do projeto com o seguinte conteúdo:
+
+{
+  "execMap": {
+    "js": "node -r sucrase/register"
+  }
+}
+
+Para executar, digitar no terminal:
+
+> yarn dev
+
+Obs.: A configuração seguinte permite realizar a depuração, após ter configurado o sucrase no projeto
+"dev:debug": "nodemon --inspect src/server.js"
+
+Para executar com debug:
+
+> yarn dev:debug
+
+Na configuração do depurador(ícone de inseto):
+
+1 - Clicar na seta launch Program e depois escolher a opção Add Configuration -> Node.js;
+2 - E depois alterar a configuração conforme a seguir:
+
+"configurations": [
+	{
+		"type": "node",
+		"request": "attach",
+		"name": "Launch Program",
+		"restart": true,
+		"protocol": "inspector"
+	}
+]
+
+
+
+
+

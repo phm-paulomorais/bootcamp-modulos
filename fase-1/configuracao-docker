@@ -1,0 +1,22 @@
+docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres:11
+
+Listar todos os containers que estão executando:
+docker ps 
+
+
+Programa Postbird: Visualizar os dados do postgres
+
+O Postbird está com problema com o postgres na versão 12 (atual), basta remover o container e criar um novo:
+
+> docker rm -f NOME_DO_CONTAINER
+
+> docker run --name NOME_DO_CONTAINER -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres:11
+
+
+@Garug Coloca o 11 e vai no ícone do Docker que fica carregado na área de trabalho do windows, usa atua tecla esquerda para abrir as opções e clica em "Switch to linux containers", para setar como container do linux, mesmo estando em ambiente windows. Vai funcionar, não sei porque, mas ele aceita conectar somente se estiver setado dessa forma
+
+@NaSa para uma outra imagem docker do postgres, você pode usar a 5431, 5430, 5429
+
+docker stop 96f5b2f8c1ba
+docker rm 96f5b2f8c1ba
+docker run --name pg_database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres:11.5
