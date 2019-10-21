@@ -20,3 +20,23 @@ O Postbird está com problema com o postgres na versão 12 (atual), basta remove
 docker stop 96f5b2f8c1ba
 docker rm 96f5b2f8c1ba
 docker run --name pg_database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres:11.5
+
+
+-> Inicializar container:
+
+> docker start nome_do_container
+
+
+-> Ver logs:
+
+> docker logs nome_do_container
+
+
+-> Visualizar todos os containers:
+
+> docker ps -a
+
+-> Parar um container:
+
+> docker stop nome_do_container
+
