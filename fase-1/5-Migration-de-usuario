@@ -1,0 +1,19 @@
+
+- Criar a tabela de usuários:
+
+> yarn sequelize migration:create --name=create-users
+
+Como resultado é criado um arquivo da migration em: database/migrations
+
+Executar a migration: 
+
+> yarn sequelize db:migrate
+
+- Desfazer a última migration:
+
+> yarn sequelize db:migrate:undo
+
+
+- Desfazer todas as migrations:
+
+> yarn sequelize db:migrate:undo:all

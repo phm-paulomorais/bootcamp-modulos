@@ -1,0 +1,88 @@
+
+- Para verificar se o código está seguindo os padrões (Eslint):
+
+> yarn add eslint -dev
+
+
+-Iniciar o eslint:
+
+> yarn eslint --init
+
+
+- Instalar a extensão eslint para verificar/mostrar os erros no projeto
+
+
+- Ir nas configurações (CTRL + SHIFT + P) -> selecionar Open Settings (JSON) e add a propriedade:
+
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        {
+		"language": "javascript",
+		"autoFix": true
+	},
+        {
+		"language": "javascriptreact",
+		"autoFix": true
+	},
+        {
+		"language": "typescript",
+		"autoFix": true
+	},
+        {
+		"language": "typescriptreact",
+		"autoFix": true
+	},
+    ],
+
+
+ - No arquivo elslintrc.java, desabilitar as regras add as propriedades em rules:
+
+  rules: {
+    "prettier/prettier": "error",
+    "class-methods-use-this": "off",
+    "no-param-reassign": "off",
+    "camelcase": "off",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
+  },
+
+
+
+ - Instalação do Prettier (Deixa o código mais bonito, por exemplo, separando uma linha de muito grande)...:
+
+> yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+
+- Depois no arquivo eslintrc.js add a informação 'prettier' em extends e plugins:
+
+plugins: ['prettier'],
+extends: ['airbnb-base', 'prettier'],
+
+
+- Como o elslint e prettier podem criar regras duplicadas, é preciso corrigir isso criando o arquivo .prettierrc.json na raiz do projeto, com o seguinte conteúdo:
+
+{
+  "singleQuote": true,
+  "trainlingComma": "es5"
+}
+
+
+- Para fazer um fix automático no código, podemos utilizar o comando:
+
+> yarn eslint --fix src --ext .js
+
+
+- Add a extensão editorconfig (Faz uma configuração igual entre todos os editores, caso a equipe utiliza editor diferente, por exemplo, um utiliza sublime text, outro vs code... ) para padronizar as configurações entre as equipes:
+  -> depois clicar com o botão direito e selecionar generate editor config na raiz do projeto, deixar o arquivo do .editorconfig, com o seguinte conteúdo:
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+
+

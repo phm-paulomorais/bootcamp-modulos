@@ -1,0 +1,12 @@
+Configurando Sequelize: 
+
+Instalar a dependência sequelize:
+
+> yarn add sequelize
+
+> yarn add sequelize-cli -D
+
+
+Para dialect postgres é preciso instalar as dependências pg e pg-store:
+
+> yarn add pg pg-hstore

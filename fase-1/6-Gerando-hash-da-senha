@@ -1,0 +1,4 @@
+
+- Gerando hash da senha, instalar a dependência:
+
+> yarn add bcryptjs
