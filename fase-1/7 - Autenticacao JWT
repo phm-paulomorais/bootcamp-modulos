@@ -1,0 +1,5 @@
+
+- Instalar a dependência de autenticação:
+
+> yarn add jsonwebtoken
+
