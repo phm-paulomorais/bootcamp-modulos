@@ -1,0 +1,3 @@
+- Instalar biblioteca yup para realizar a validação dos dados:
+
+> yarn add yup
