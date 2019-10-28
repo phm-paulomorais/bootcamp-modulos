@@ -37,7 +37,7 @@ class SessionController {
         email
       },
       // segundo parametro foi gerado do hash MD5 de uma frase
-      // aleatória. Essa string deve ser única para a aplicação
+      // aleatória. Essa string deve ser um ID único para a aplicação
       token: jwt.sign({ id }, authConfig.secret, {
         expiresIn: authConfig.expiresIn
       })

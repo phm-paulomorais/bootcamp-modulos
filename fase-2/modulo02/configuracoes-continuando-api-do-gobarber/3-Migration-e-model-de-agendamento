@@ -1,0 +1,7 @@
+- Criar a tabela de agendamentos:
+
+> yarn sequelize migration:create --name=create-appointments
+
+- Executar a migration:
+
+> yarn sequelize db:migrate

@@ -48,7 +48,7 @@ Criar o script no arquivo package.json:
     "dev:debug": "nodemon --inspect src/server.js"
   },
 
-E o arquivo nodemon.json na raiz do projeto com o seguinte conteúdo:
+E o arquivo nodemon.json (Configuração para executar o sucrase/register antes da aplicação) na raiz do projeto com o seguinte conteúdo:
 
 {
   "execMap": {

@@ -1,0 +1,17 @@
+- Criar a tabela de dados files:
+
+> yarn sequelize migration:create --name=create-files
+
+- Executar a migration (arquivo gerado e modificado em database/migrations):
+
+> yarn sequelize db:migrate
+
+
+- Criando a migration para modificar a tabela de usuários, criando a coluna avatar:
+
+> yarn sequelize migration:create --name=add-avatar-field-to-users
+
+
+- Executar a migration:
+
+> yarn sequelize db:migrate

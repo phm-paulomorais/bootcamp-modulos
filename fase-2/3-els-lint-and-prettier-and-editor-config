@@ -1,7 +1,7 @@
 
 - Para verificar se o código está seguindo os padrões (Eslint):
 
-> yarn add eslint -dev
+> yarn add eslint -D
 
 
 -Iniciar o eslint:
@@ -9,8 +9,12 @@
 > yarn eslint --init
 
 
-- Instalar a extensão eslint para verificar/mostrar os erros no projeto
+- Instalar a extensão eslint para verificar/mostrar os erros no projeto 
+-> To check syntax, find problems, and enforce code style
 
+Após instalação remover o arquivo "package-lock.json" e depois instalar a dependência com yarn:
+- No terminal executar:
+> yarn
 
 - Ir nas configurações (CTRL + SHIFT + P) -> selecionar Open Settings (JSON) e add a propriedade:
 

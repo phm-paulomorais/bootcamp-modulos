@@ -1,0 +1,3 @@
+- Instalar biblioteca de datas date-fns:
+
+> yarn add date-fns@next
