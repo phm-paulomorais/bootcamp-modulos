@@ -1,0 +1,8 @@
+- Baixando uma imagem do container com banco de dados MongoDB:
+
+> docker run --name mongobarber -p 27017:27017 -d -t mongo
+
+
+- Instalar o ORM mongoose para o MongoDB:
+
+> yarn add mongoose
