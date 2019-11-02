@@ -1,0 +1,7 @@
+Baixando imagem redis para ser executado no docker:
+
+> docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+
+- Instalar biblioteca bee-queue para trabalhar com backgrounds jobs:
+
+> yarn add bee-queue
