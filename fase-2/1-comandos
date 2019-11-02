@@ -13,7 +13,7 @@ Instalar a biblioteca express:
 
 > yarn add express
 
-Quandor outra pessoa for executar o projeto, basta executar o seguinte comando para instalar as dependências:
+Quando outra pessoa for executar o projeto, basta executar o seguinte comando para instalar as dependências:
 
 > yarn
 
