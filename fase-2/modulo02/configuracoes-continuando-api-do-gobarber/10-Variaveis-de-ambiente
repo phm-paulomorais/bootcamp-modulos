@@ -1,0 +1,3 @@
+- Instalar biblioteca para carregar variáveis de ambiente na aplicação:
+
+> yarn add dotenv

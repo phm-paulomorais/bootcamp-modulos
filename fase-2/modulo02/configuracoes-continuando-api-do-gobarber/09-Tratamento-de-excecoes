@@ -1,0 +1,10 @@
+Sentry (Para monitoramento de exceções)
+- Instalar dependência para que o express consiga pegar o erros nas funções async:
+
+> yarn add express-async-errors
+
+
+- Instalar a biblioteca youch (tratativa das mensagens de erros para dar um visualização
+melhor para o desenvolvedor):
+
+> yarn add youch 
